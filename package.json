@@ -1,0 +1,31 @@
+{
+  "name": "bookmyshow-platform",
+  "version": "1.0.0",
+  "description": "Production-Grade BookMyShow Platform with Multi-Instance Concurrency, MySQL 8, Admin Panel, and B2B API Gateway",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "sim": "npm --prefix backend run sim",
+    "sim:1m": "npm --prefix backend run sim:1m",
+    "sim:b2b": "npm --prefix backend run test:b2b"
+  },
+  "keywords": [
+    "bookmyshow",
+    "system-design",
+    "concurrency",
+    "seat-locking",
+    "mysql",
+    "redis",
+    "b2b-gateway"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}
